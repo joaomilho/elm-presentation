@@ -18,6 +18,10 @@ view address count =
     button [ onClick address Dec ] [text "-"]
   ]
 
+currentCount : Signal Int
+currentCount =
+  Signal.foldp update 0 actions.signal
+
 actions : Signal.Mailbox Action
 actions =
   Signal.mailbox NoOp
