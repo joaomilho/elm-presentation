@@ -4,11 +4,13 @@ import Signal exposing (Signal, Address)
 
 type Action = Inc | Dec
 
+update : Action -> Int -> Int
 update action count =
   case action of
     Inc -> count + 1
     Dec -> count - 1
 
+view : Address Action -> Int -> Html
 view address count =
   div [] [
     h1 [] [text (toString count)],
