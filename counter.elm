@@ -5,7 +5,9 @@ import StartApp
 type Action = Inc | Dec
 
 update action count =
-  -- todo
+  case action of
+    Inc -> count + 1
+    Dec -> count - 1
 
 view address count =
   div [] [
