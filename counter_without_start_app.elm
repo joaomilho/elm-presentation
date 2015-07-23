@@ -2,7 +2,7 @@ import Html exposing (h1, div, button, text)
 import Html.Events exposing (onClick)
 import Signal exposing (Signal, Address)
 
-type Action = Inc | Dec
+type Action = NoOp | Inc | Dec
 
 update : Action -> Int -> Int
 update action count =
@@ -17,3 +17,11 @@ view address count =
     button [ onClick address Inc ] [text "+"],
     button [ onClick address Dec ] [text "-"]
   ]
+
+actions : Signal.Mailbox Action
+actions =
+  Signal.mailbox NoOp
+
+main : Signal Html
+main =
+  Signal.map (view actions.address) currentCount
