@@ -8,6 +8,10 @@ update action count =
   -- todo
 
 view address count =
-  -- todo
+  div [] [
+    h1 [] [text (toString count)],
+    button [ onClick address Inc ] [text "+"],
+    button [ onClick address Dec ] [text "-"]
+  ]
 
 main = StartApp.start { model = 0, update = update, view = view }
