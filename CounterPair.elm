@@ -8,7 +8,13 @@ import StartApp
 type Action = Counter1 Counter.Action | Counter2 Counter.Action
 
 update action counts =
-  -- todo
+  case action of
+    Counter1 act ->
+      let newCount = Counter.update act (counts `get` 0)
+        in set counts 0 newCount
+    Counter2 act ->
+      let newCount = Counter.update act (counts `get` 1)
+        in set counts 1 newCount
 
 view address counts =
   div []
