@@ -1,6 +1,7 @@
+module Counter (Action, update, view) where
+
 import Html exposing (h1, div, button, text)
 import Html.Events exposing (onClick)
-import StartApp
 
 type Action = Inc | Dec
 
@@ -15,5 +16,3 @@ view address count =
     button [ onClick address Inc ] [text "+"],
     button [ onClick address Dec ] [text "-"]
   ]
-
-main = StartApp.start { model = 0, update = update, view = view }
