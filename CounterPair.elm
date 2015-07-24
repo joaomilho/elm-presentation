@@ -11,5 +11,5 @@ update action counts =
 view address counts =
   -- todo
 
-main = StartApp.start { model = ???, update = update, view = view }
+main = StartApp.start { model = array [0, 0], update = update, view = view }
 
