@@ -2,7 +2,9 @@
 
 This is a presentation about [Elm](http://elm-lang.org) for the [React Israel meetup group](http://www.meetup.com/ReactJS-IL).
 
-The goal of this presentation is to discuss the value of `setState` in [React](http://facebook.github.io/react). I will attempt to give some light to this debate by showing how Elm handles component composition, specially how not only the views – the `render` in React – but also the models – the internal component states in React – must me composed.
+The goal of this presentation is to discuss the value of `setState` in [React](http://facebook.github.io/react). This topic was prompted by a [Facebook discussion](https://www.facebook.com/groups/reactjsil/permalink/1592365447697253/) on the group pointing to this [Reddit comment](https://www.reddit.com/r/reactjs/comments/3bjdoe/state_is_an_antipattern/).
+
+I will attempt to give some light to this debate by showing how Elm handles component composition, specially how not only the views – the `render` in React – but also the models – the internal component states in React – must me composed.
 
 Along the way, I plan to explain how data lives always in the main component, although the actuall update is delegated to subcomponents; how the data flow respects the "unidirectional data flow", going from the main component to sub component's views; and how it avoids completely local states.
 
@@ -14,11 +16,18 @@ An additional goal is to convince Javascript developers that learning some [Hask
 
 ###### Slides
 
-The original slides can be downloaded [here](https://github.com/joaomilho/elm-presentation/blob/master/react-meetup-state-elm.key?raw=true), but you'll need [Apple's Keynote](https://www.apple.com/mac/keynote/). TODO PDF
+The source slides can be downloaded [here](https://github.com/joaomilho/elm-presentation/blob/master/react-meetup-state-elm.key?raw=true), but you'll need [Apple's Keynote](https://www.apple.com/mac/keynote/). A [PDF is also available](https://github.com/joaomilho/elm-presentation/blob/master/react-meetup-state-elm.pdf), but it looks bad.
 
 ###### Code
 
 The code is, well... in this repo. The best way to visualise it is using the awesome [Git Wayback Machine](https://github.com/MadRabbit/git-wayback-machine), so you can see the thing unfolding step by step (commit by commit, actually).
+
+Also you I'll show a little bit of these two projects:
+
+  - [github.com/joaomilho/game-of-life-elm](https://github.com/joaomilho/game-of-life-elm)
+
+
+  - [github.com/joaomilho/kevernote-elm](https://github.com/joaomilho/kevernote-elm)
 
 ### Resources
 
@@ -51,6 +60,8 @@ The code is, well... in this repo. The best way to visualise it is using the awe
   - [Live React: Hot Reloading with Time Travel](https://www.youtube.com/watch?v=xsSnOQynTHs) *by* [Dan Abramov](https://twitter.com/dan_abramov)
 
   - [Controlling Time and Space: understanding the many formulations of FRP](https://www.youtube.com/watch?v=Agu6jipKfYw) *by* [Evan Czaplicki](https://twitter.com/czaplic)  
+
+  - [My adventure with Elm](https://www.youtube.com/watch?v=cBVXyxt-9_Q) *by* [Yan Cui](https://twitter.com/theburningmonk)
   
   - [PureScript (Maybe This Time We Get JavaScript Right)](https://www.youtube.com/watch?v=yIlDBPiMb0o) *by* [Bodil Stokke](https://twitter.com/bodil)
   
